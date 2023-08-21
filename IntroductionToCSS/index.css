@@ -1,0 +1,31 @@
+@font-face {
+    font-family: "Poppins-Semibold";
+    src: url("./fonts/Poppins/Poppins-SemiBold.ttf");
+}
+
+@font-face {
+    font-family: "Poppins-Medium";
+    src: url("./fonts/Poppins/Poppins-Medium.ttf");
+}
+
+@font-face {
+    font-family: "Poppins-Regular";
+    src: url("./fonts/Poppins/Poppins-Regular.ttf");
+}
+
+body {
+    font-family: "Poppins-Regular";
+}
+
+
+.external-styling {
+    background-color: yellow;
+}
+
+.external-styling h3{
+    color: green;
+}
+
+.external-styling p{
+    color: orange;
+}

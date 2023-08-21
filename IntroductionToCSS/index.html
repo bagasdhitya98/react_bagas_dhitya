@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Introduction to CSS</title>
+    <!-- menggunakan cara external -->
+    <link rel="stylesheet" href="index.css">
+    <!-- menggunakan cara internal -->
+    <style>
+        .internal-styling {
+            background-color: brown;
+        }
+
+        .internal-styling h3 {
+            color: yellow;
+        }
+
+        .internal-styling p {
+            color: orange
+        }
+    </style>
+</head>
+
+<body>
+    <div class="external-styling">
+        <h3>Selamat datang di materi CSS</h3>
+        <p>Kita akan belajar styling dan layouting</p>
+    </div>
+    <div class="internal-styling">
+        <h3>Selamat datang di materi CSS</h3>
+        <p>Kita akan belajar styling dan layouting</p>
+    </div>
+    <!-- menggunakan inline styling -->
+    <div style="background-color: red; color: white">
+        Menggunakan inline styling
+    </div>
+</body>
+
+</html>
