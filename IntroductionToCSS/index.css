@@ -29,3 +29,65 @@ body {
 .external-styling p{
     color: orange;
 }
+
+.container-box {
+    margin:10px;
+    width: 300px;
+    height: 300px;
+    background-color: royalblue;
+}
+
+.model-box {
+    padding: 10px;
+    width: 150px;
+    height: 150px;
+    background-color: saddlebrown;
+}
+
+.container-image {
+    width: 100%;
+    height: 400px;
+    margin: 10px;
+    background-color: yellow;
+    /* display: flex; */
+    /* justify-content: center;
+    align-items: center; */
+}
+
+.model-image{
+    width: 200px;
+    height: 100px;
+    background-size: cover;
+    background-position:top;
+    background-image: url("https://imgs.search.brave.com/ZOdK1qANnODotSZNg8yfShE7hRZIEIqFR4RQ04zu9DY/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL00v/TVY1Qk9URTFZVGhs/TVRndE1ESTFNQzAw/WldKaUxXRXpNemN0/TURKbVlXUTNOalpo/TlRJNFhrRXlYa0Zx/Y0dkZVFWUm9hWEpr/VUdGeWRIbEpibWRs/YzNScGIyNVhiM0py/Wm14dmR3QEAuX1Yx/X1FMNzVfVVg1MDBf/Q1IwLDAsNTAwLDI4/MV8uanBn");
+}
+
+.shape-image-percentage {
+    width: 60%;
+    height: 15px;
+    background-color: orange;
+}
+
+.shape-image-pixel {
+    width: 620px;
+    height: 15px;
+    background-color: brown;
+}
+
+.container-grid {
+    width: 100%;
+    height: 500px;
+    background-color: beige;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto auto auto auto;
+    justify-content: space-evenly;
+}
+
+.model-grid {
+    margin-top: 10px;
+    margin-bottom:10px;
+    width: 100px;
+    height: 70%;
+    background-color: brown;
+}
