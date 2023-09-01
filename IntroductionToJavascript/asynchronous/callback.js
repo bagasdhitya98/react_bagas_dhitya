@@ -47,7 +47,7 @@ function user(message){
     }
     setTimeout(() => {
         console.log("Sudah, pak. Terima kasih ya")
-    }, 2000)
+    },)
 }
 
 driver(user)
