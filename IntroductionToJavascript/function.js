@@ -170,3 +170,5 @@ function checkPlacement(number){
 
 // checkPlacement(3)
 // checkPlacement(6)
+
+console.log(typeof null)
