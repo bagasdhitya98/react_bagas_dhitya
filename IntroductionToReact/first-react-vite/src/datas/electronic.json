@@ -1,0 +1,28 @@
+{
+    "data" : [
+        {
+            "id": 1,
+            "title": "Apple Macbook Pro 2020" ,
+            "price": "Rp14.589.000" ,
+            "image": "https://images.tokopedia.net/img/cache/200-square/VqbcmM/2023/8/21/1c72ea03-4ef5-4106-9140-3d018e491007.png"
+        },
+        {
+            "id": 2,
+            "title": "Usb Type C Hub 4 port Ugreen" ,
+            "price": "Rp165.000" ,
+            "image": "https://images.tokopedia.net/img/cache/200-square/VqbcmM/2023/8/19/ade32ac5-5b1a-4869-af1f-e5f1ca94836a.jpg"
+        },
+        {
+            "id": 3,
+            "title": "Lenovo K3 Pro Portable" ,
+            "price": "Rp79.000" ,
+            "image": "https://images.tokopedia.net/img/cache/200-square/VqbcmM/2023/6/15/ba473d94-aad7-4af2-ab32-b1b715f86619.jpg"
+        },
+        {
+            "id": 4,
+            "title": "Acome A1 SENSE Speaker" ,
+            "price": "Rp65.900" ,
+            "image": "https://images.tokopedia.net/img/cache/200-square/VqbcmM/2022/11/16/5830848f-3535-48cb-96f0-8e6e68a4171e.jpg"
+        }
+    ]
+}
