@@ -8,6 +8,20 @@ import { withRouter } from '../../withRouterr'
         password: ""
     }
 
+    componentDidMount(){
+      console.log("Component Did Mount")
+    }
+
+    componentDidUpdate(prevState){
+      const {username} = this.state
+      if(prevState.username !== username){
+        console.log("State username berubah")
+      }
+    }
+    componentWillUnmount(){
+      console.log("Component Will Unmount")
+    }
+
   render() {
     const {navigate} = this.props
     const {username, password} = this.state
