@@ -12,7 +12,7 @@ import React, { Component } from 'react'
         <div className='card-body flex flex-col gap-y-5'>
             <p className='font-semibold text-lime-600'>{title}</p>
             <p className='text-lime-500'>{description}</p>
-            <p className='font-semibold text-lime-600'>Author : {author}</p>
+            <p className='font-semibold text-lime-600'>Author : {author !== null ? author : "Anonymous"}</p>
             <button className='w-40 h-10 bg-lime-500 text-center flex justify-center items-center text-white'
             onClick={onClick}
             >See Details</button>
