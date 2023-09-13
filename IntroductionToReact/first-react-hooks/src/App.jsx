@@ -3,6 +3,7 @@ import axios from 'axios'
 
 import Home from "./pages/home"
 import Login from "./pages/login"
+import Detail from "./pages/detail"
 
 const App = () => {
 
@@ -12,6 +13,7 @@ const App = () => {
   <BrowserRouter>
       <Routes>
          <Route element={<Home/>} path="/"/>
+         <Route element={<Detail/>} path="/detail/:id"/>
          <Route element={<Login/>} path="/login"/>
       </Routes>
   </BrowserRouter>
