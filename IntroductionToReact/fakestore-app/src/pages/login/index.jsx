@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import {useNavigate} from "react-router-dom"
 
 import Layout from '../../components/Layout'
 import Input from '../../components/Input'
@@ -6,14 +7,14 @@ import Button from '../../components/Button'
 
 const Login = () => {
 
+  const navigate = useNavigate()
   const [username, setUsername] = useState("")
   const [password, setPassword] = useState("")
   const [visibility, setVisibility] = useState(false)
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    console.log("username : ", username)
-    console.log("password : ", password)
+    navigate('/')
   }
 
   console.log("visible ", visibility)
