@@ -7,12 +7,12 @@ import Modal from "../../components/Modal";
 import Navbar from "../../components/Navbar";
 
 const Home = () => {
-  const username = Cookies.get("username");
+  const email = Cookies.get("email");
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <section>
-      <Navbar username={username} />
+      <Navbar email={email} />
       <Layout>
         <div className="w-60 h-20">
           <Button
