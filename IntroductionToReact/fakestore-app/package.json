@@ -12,10 +12,12 @@
   "dependencies": {
     "@heroicons/react": "^2.0.18",
     "axios": "^1.5.0",
+    "formik": "^2.4.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.16.0",
-    "sweetalert2": "^11.7.28"
+    "sweetalert2": "^11.7.28",
+    "yup": "^1.2.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",
