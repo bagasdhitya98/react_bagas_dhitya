@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { useFormik, validateYupSchema } from "formik";
+import { useFormik } from "formik";
+import Cookies from "js-cookie";
 import * as yup from "yup";
 
 import Layout from "../../components/Layout";
@@ -12,6 +13,13 @@ const Login = () => {
   const [visibility, setVisibility] = useState(false);
 
   const shape = {
+    email: yup
+      .string()
+      .required("Email belum diisi")
+      .matches(
+        "/^[A-Za-z0-9._%+-]+@[A-Za-z0-9,-]+.[A-Za-z](2,4)$/",
+        "Email tidak valid"
+      ),
     username: yup.string().required("Username belum diisi"),
     password: yup.string().required("Password belum diisi"),
   };
@@ -20,17 +28,16 @@ const Login = () => {
 
   const formik = useFormik({
     initialValues: {
+      email: "",
       username: "",
       password: "",
     },
     validationSchema: userCredentials,
     onSubmit: (values) => {
-      console.log(values);
-      // navigate("/");
+      Cookies.set("username", values.username, { path: "/" });
+      navigate("/");
     },
   });
-
-  console.log("visible ", visibility);
 
   return (
     <Layout>
@@ -38,6 +45,16 @@ const Login = () => {
         onSubmit={formik.handleSubmit}
         className="w-96 grid grid-cols-1 gap-y-5"
       >
+        <Input
+          id="email"
+          name="email"
+          type="text"
+          label="Email"
+          placeholder="Type your email here ..."
+          value={formik.values.email}
+          onChange={formik.handleChange}
+          error={formik.errors.email}
+        />
         <Input
           id="username"
           name="username"
