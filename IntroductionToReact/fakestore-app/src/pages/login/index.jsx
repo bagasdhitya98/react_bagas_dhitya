@@ -35,7 +35,8 @@ const Login = () => {
           values.email,
           values.password
         );
-        console.log(response.user);
+        Cookies.set("accessToken", response?.user?.accessToken);
+        navigate("/");
       } catch (error) {
         console.log(error);
       }
