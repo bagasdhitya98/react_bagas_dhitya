@@ -5,6 +5,7 @@ import Navbar from "../../components/Navbar";
 
 const Product = () => {
   const user = useSelector((state) => state.auth.user);
+  const language = useSelector((state) => state.mode.language);
 
   console.log("user : ", user);
 
@@ -13,13 +14,19 @@ const Product = () => {
       <Navbar />
       <section className="w-screen h-screen flex flex-col justify-center items-center">
         <div className="mx-auto">
-          Kalimat ini bisa berubah seiring dengan perubahan Redux
+          {language
+            ? "This sentences will be changed if Redux was triggered"
+            : " Kalimat ini bisa berubah seiring dengan perubahan Redux"}
         </div>
         <div className="mx-auto">
-          Kalimat ini bisa berubah seiring dengan perubahan Redux
+          {language
+            ? "This sentences will be changed if Redux was triggered"
+            : " Kalimat ini bisa berubah seiring dengan perubahan Redux"}
         </div>
         <div className="mx-auto">
-          Kalimat ini bisa berubah seiring dengan perubahan Redux
+          {language
+            ? "This sentences will be changed if Redux was triggered"
+            : " Kalimat ini bisa berubah seiring dengan perubahan Redux"}
         </div>
       </section>
     </section>
