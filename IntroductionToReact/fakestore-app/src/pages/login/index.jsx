@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import { ThemeContext } from "../../context/ThemeContext";
 import { useNavigate } from "react-router-dom";
 import { useFormik } from "formik";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
@@ -13,6 +14,7 @@ import Button from "../../components/Button";
 const Login = () => {
   const auth = getAuth(app);
   const navigate = useNavigate();
+  const { theme } = useContext(ThemeContext);
   const [visibility, setVisibility] = useState(false);
 
   const shape = {
@@ -44,7 +46,7 @@ const Login = () => {
   });
 
   return (
-    <Layout>
+    <Layout mode={theme}>
       <form
         onSubmit={formik.handleSubmit}
         className="w-96 grid grid-cols-1 gap-y-5"
