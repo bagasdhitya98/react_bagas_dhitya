@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import { addItem } from "../../features/cartSlice";
 import axios from "axios";
 
 import Navbar from "../../components/Navbar";
@@ -8,7 +9,8 @@ import Card from "../../components/Card";
 
 const Product = () => {
   const navigate = useNavigate();
-  const user = useSelector((state) => state.auth.user);
+  const dispatch = useDispatch();
+  const items = useSelector((state) => state.cart.items);
   const [products, setProduct] = useState([]);
 
   const getProduct = () => {
@@ -23,9 +25,24 @@ const Product = () => {
       });
   };
 
+  const handleCheckout = (item) => {
+    const newItem = {
+      id: item?.id,
+      title: item?.title,
+      image: item?.image,
+      description: item?.description,
+      price: item?.price,
+      quantity: item?.quantity,
+    };
+    dispatch(addItem(newItem));
+    navigate("/cart");
+  };
+
   useEffect(() => {
     getProduct();
   }, []);
+
+  console.log("hasil dari redux : ", items);
 
   return (
     <section>
@@ -35,14 +52,14 @@ const Product = () => {
           {products &&
             products?.map((item, index) => {
               return (
-                <div key={index} className="w-96 h-max">
+                <div key={index} className="w-full h-max">
                   <Card
                     id={item?.id}
                     title={item?.title}
                     image={item?.image}
                     description={item?.description}
                     price={item?.price}
-                    onClick={() => navigate("/cart")}
+                    onClick={() => handleCheckout(item)}
                   />
                 </div>
               );
